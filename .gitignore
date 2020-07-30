@@ -1,3 +1,4 @@
+# ---> Java
 # Compiled class file
 *.class
 
@@ -21,3 +22,83 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+
+# Logs and databases #
+######################
+*.log
+*.log*
+/logs
+
+# build src folder
+/src
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Editor Files #
+################
+*~
+*.swp
+
+# Gradle Files #
+################
+.gradle
+
+# Build output directies
+/target
+*/target
+/build
+*/build
+/LOGGING_ROOT_IS_UNDEFINED
+
+# IntelliJ specific files/directories
+out
+.idea
+.idea/
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+*/.project
+*/.settings
+.project
+.settings
+.classpath
+*/*.classpath
+/jeecg-boot-base-common/.classpath
+/jeecg-boot-base-common/.project
+/jeecg-boot-module-system/LOG_HOME_IS_UNDEFINED/error-log.html
+/jeecg-boot-module-system/LOG_HOME_IS_UNDEFINED/jeecgboot.2020-02-06.html
+*/.classpath
+*/.project
+*/LOG_HOME_IS_UNDEFINED
+
+*.html
