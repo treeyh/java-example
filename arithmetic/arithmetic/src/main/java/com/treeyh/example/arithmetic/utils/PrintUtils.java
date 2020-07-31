@@ -1,4 +1,4 @@
-package com.treeyh.example.arithmetic.util;
+package com.treeyh.example.arithmetic.utils;
 
 /**
  * @version 1.0.0
@@ -7,7 +7,7 @@ package com.treeyh.example.arithmetic.util;
  * @email: tree@ejyi.com
  * @create 2020-07-30 10:21
  */
-public class PrintUtil {
+public class PrintUtils {
 
     public static void printIntArray(int[] ids, int l, int r){
         for(int i : ids){
