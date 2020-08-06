@@ -11,6 +11,7 @@
     <modules>
         <module>arithmetic/leetcode</module>
         <module>arithmetic/arithmetic</module>
+        <module>design-pattern/design-pattern</module>
     </modules>
 
     <dependencyManagement>
