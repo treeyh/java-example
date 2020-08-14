@@ -62,32 +62,48 @@ public class MergeSort {
 
     }
 
-//    public static void merge(int[] ids, int l, int mi, int r){
-//
-//        List<Integer> tmpls =new ArrayList<Integer>(mi - l + 1);
-//        //复制出左边一段
-//        for(int i = l; i <= mi; i++){
-//            tmpls.add(ids[i]);
-//        }
-//        List<Integer> tmprs =new ArrayList<Integer>(r - mi );
-//        for(int i = mi+1; i <= r; i++){
-//            tmprs.add(ids[i]);
-//        }
-//
-//        for(int i = l, j = 0, k = 0; (j < tmpls.size()) || (k < tmprs.size()); ){
-//            if(j < tmpls.size() && ((k >= tmprs.size()) || (tmpls.get(j) <= tmprs.get(k)))){
-//                ids[i++] = tmpls.get(j++);
-//            }
-//            if(k< tmprs.size() && ((j >= tmpls.size() ) || (tmpls.get(j) > tmprs.get(k)))){
-//                ids[i++] = tmprs.get(k++);
-//            }
-//        }
-//    }
 
+    private static  int[] sort2(int[] nums, int l, int r) {
+
+        if (l >= r) {
+            return nums;
+        }
+
+        int mi = (l + r) >> 1;
+        sort2(nums, l, mi);
+        sort2(nums, mi +1, r);
+        merge2(nums, l, mi, r);
+
+        return nums;
+    }
+
+    private static void  merge2(int[] nums, int l, int mi, int r) {
+
+        int[] lefts = new int[mi - l + 1];
+        int[] rights = new int[r - mi];
+
+        for(int i = l; i<=mi; i++){
+            lefts[i - l] = nums[i];
+        }
+        for(int i = mi+1; i<=r; i++){
+            rights[i - (mi + 1)] = nums[i];
+        }
+
+        int i = 0, j=0 , k=l;
+
+        for(;i<lefts.length || j<rights.length;) {
+            if(i<lefts.length && (j>=rights.length || lefts[i] <= rights[j])) {
+                nums[k++] = lefts[i++];
+            }
+            if(j<rights.length && (i>=lefts.length || lefts[i] >= rights[j]) ) {
+                nums[k++] = rights[j++];
+            }
+        }
+    }
 
     public static void main(String[] args) throws JsonProcessingException {
 
-        int[] result = sort(nums, 0, nums.length - 1);
+        int[] result = sort2(nums, 0, nums.length - 1);
 
         ObjectMapper om = new ObjectMapper();
         System.out.println(om.writeValueAsString(result));

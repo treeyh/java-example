@@ -84,9 +84,42 @@ public class FastSort {
     }
 
 
+    public static int[] sort3(int[] nums, int l, int r) {
+        if (l >= r) {
+            return nums;
+        }
+
+        int i = l, j = r;
+        int x = nums[l];
+
+        while (i < j) {
+
+            for(; i < j; j --) {
+                if(x > nums[j]) {
+                    nums[i++] = nums[j];
+                    break;
+                }
+            }
+
+            for(; i< j; i++) {
+                if(nums[i] > x) {
+                    nums[j--] = nums[i];
+                    break;
+                }
+            }
+
+        }
+
+        nums[i] = x;
+        sort3(nums, l, i-1);
+        sort3(nums, i+1, r);
+        return nums;
+    }
+
+
     public static void main(String[] args) throws JsonProcessingException {
 
-        int[] result = sort2(nums, 0, nums.length - 1);
+        int[] result = sort3(nums, 0, nums.length - 1);
 
         ObjectMapper om = new ObjectMapper();
         System.out.println(om.writeValueAsString(result));
