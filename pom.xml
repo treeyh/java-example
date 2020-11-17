@@ -12,6 +12,8 @@
         <module>arithmetic/leetcode</module>
         <module>arithmetic/arithmetic</module>
         <module>design-pattern/design-pattern</module>
+        <module>spring-cloud/nacos/spring-cloud-nacos-a</module>
+        <module>spring-cloud/nacos/spring-cloud-nacos-b</module>
     </modules>
 
     <dependencyManagement>
