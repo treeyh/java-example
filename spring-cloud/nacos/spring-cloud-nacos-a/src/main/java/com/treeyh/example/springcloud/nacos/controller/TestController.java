@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
  * @version: 1.0
  * @description:
  * @create: 2020-11-17 17:56
- * @email: hai.yu@snowballtech.com
+ * @email: tree@ejyi.com
  **/
 @RequestMapping(value = "/api/v1")
 @RestController

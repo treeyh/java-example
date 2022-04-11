@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @version: 1.0
  * @description:
  * @create: 2020-11-17 17:59
- * @email: hai.yu@snowballtech.com
+ * @email: tree@ejyi.com
  **/
 @Data
 @Builder
